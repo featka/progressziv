@@ -4,6 +4,6 @@ metadata:
   name: traefik
   namespace: kube-system
 spec:
-  interval: 10m0s
+  interval: 30m0s
   url: https://helm.traefik.io/traefik
 
