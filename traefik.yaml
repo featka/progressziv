@@ -11,10 +11,10 @@ spec:
         kind: HelmRepository
         name: traefik
       version: '>=10.6.1'
-      values:
-        service:
-          type: ClusterIP
-        rbac:
-          enabled: false
+  values:
+    service:
+      type: ClusterIP
+    rbac:
+      enabled: false
   interval: 10m0s
 
