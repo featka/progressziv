@@ -16,5 +16,5 @@ spec:
       type: ClusterIP
     rbac:
       enabled: false
-  interval: 10m0s
+  interval: 1m0s
 
