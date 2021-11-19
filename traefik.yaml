@@ -12,9 +12,29 @@ spec:
         name: traefik
       version: '>=10.6.1'
   values:
+    ports:
+      traefik:
+        expose: true
+    web:
+      port: 80
+      nodeport: 30080
+      redirectto: websecure
+    websecure:
+      port: 443
+      nodeport: 30443
+    metrics:
+      port: 9101
+      exposedport: 9101
+    securitycontext:
+      capabilities:
+        drop: [ all ]
+        add: [ net_bind_service ]
+      readonlyrootfilesystem: true
+      runasgroup: 0
+      runasnonroot: false
+      runasuser: 0
+      hostNetwork: true
     service:
-      type: ClusterIP
-    rbac:
-      enabled: false
-  interval: 1m0s
+      type: NodePort
+    interval: 1m0s
 
