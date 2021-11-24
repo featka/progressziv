@@ -15,6 +15,11 @@ spec:
     providers:
       kubernetesCRD:
         allowCrossNamespace: true
+    logs:
+      general:
+        level: DEBUG
+      access:
+        enabled: true
     ports:
       traefik:
         expose: true
