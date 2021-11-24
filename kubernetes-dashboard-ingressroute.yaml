@@ -6,11 +6,11 @@ metadata:
 spec:
   entryPoints:
     - web
-  middlewares:
-    - name: strip-kubernetes-dashboard-prefix
   routes:
   - match: PathPrefix(`/kubernetes-dashboard`)
     kind: Rule
+    middlewares:
+    - name: strip-kubernetes-dashboard-prefix
     services:
     - name: kubernetes-dashboard
       port: 9090
