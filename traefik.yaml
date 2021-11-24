@@ -12,6 +12,9 @@ spec:
         name: traefik
       version: '>=10.6.1'
   values:
+    providers:
+      kubernetesCRD:
+        allowCrossNamespace: true
     ports:
       traefik:
         expose: true
