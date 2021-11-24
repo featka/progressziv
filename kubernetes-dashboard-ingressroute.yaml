@@ -14,12 +14,4 @@ spec:
     services:
     - name: kubernetes-dashboard
       port: 9090
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: strip-kubernetes-dashboard-prefix
-spec:
-  stripPrefix:
-    prefixes:
-      - /kubernetes-dashboard
+
