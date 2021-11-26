@@ -23,26 +23,26 @@ spec:
     ports:
       traefik:
         expose: true
-    web:
-      port: 80
-      nodeport: 30080
-      redirectto: websecure
-    websecure:
-      port: 443
-      nodeport: 30443
-    metrics:
-      port: 9101
-      exposedport: 9101
-    securitycontext:
+      web:
+        port: 80
+        nodePort: 30080
+        redirectTo: websecure
+      websecure:
+        port: 443
+        nodePort: 30443
+      metrics:
+        port: 9101
+        exposedPort: 9101
+    securityContext:
       capabilities:
-        drop: [ all ]
-        add: [ net_bind_service ]
-      readonlyrootfilesystem: true
-      runasgroup: 0
-      runasnonroot: false
-      runasuser: 0
-      hostNetwork: true
+        drop: [ ALL ]
+        add: [ NET_BIND_SERVICE ]
+      readOnlyRootFilesystem: true
+      runAsGroup: 0
+      runAsNonRoot: false
+      runAsUser: 0
+    hostNetwork: true
     service:
       type: NodePort
-  interval: 1m0s
+interval: 1m0s
 
