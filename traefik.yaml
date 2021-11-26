@@ -44,5 +44,5 @@ spec:
     hostNetwork: true
     service:
       type: NodePort
-interval: 1m0s
+  interval: 1m0s
 
