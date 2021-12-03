@@ -23,7 +23,7 @@ spec:
     metrics-server:
       enabled: false
     service:
-      externalPort: 9090
+      externalPort: 8443
     resources:
       requests:
         cpu: 50m
