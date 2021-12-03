@@ -17,7 +17,7 @@ spec:
     settings:
       clusterName: "minikube"
       itemsPerPage: 50
-    protocolHttp: true
+    protocolHttp: false
     metricsScraper:
       enabled: false
     metrics-server:
