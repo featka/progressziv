@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   entryPoints:
-    - web
+    - websecure
   routes:
   - match: PathPrefix(`/kubernetes-dashboard`)
     kind: Rule
