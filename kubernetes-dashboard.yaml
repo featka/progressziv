@@ -17,13 +17,13 @@ spec:
     settings:
       clusterName: "minikube"
       itemsPerPage: 50
-    protocolHttp: false
+    protocolHttp: true
     metricsScraper:
       enabled: false
     metrics-server:
       enabled: false
     service:
-      externalPort: 8443
+      externalPort: 9090
     resources:
       requests:
         cpu: 50m
