@@ -13,5 +13,5 @@ spec:
     - name: strip-kubernetes-dashboard-prefix
     services:
     - name: kubernetes-dashboard
-      port: 8443
+      port: 9090
 
